@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
+import 'package:onthegoapp/main/screens/Home.dart';
 import 'package:onthegoapp/main/users/SDForgotPwdScreen.dart';
 import 'package:onthegoapp/main/users/SDRegisterScreen.dart';
 import 'package:onthegoapp/main/utils/SDColors.dart';
@@ -26,8 +27,8 @@ class _SDLoginScreenState extends State<SDLoginScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Text('Easy to learn \nanywhere and anytime',
-                      style: boldTextStyle(size: 25)),
+                  // Text('Easy to learn \nanywhere and anytime',
+                  //     style: boldTextStyle(size: 25)),
                   SizedBox(height: 25),
                   Text('Sign in to your account',
                       style: secondaryTextStyle(size: 16)),
@@ -99,7 +100,7 @@ class _SDLoginScreenState extends State<SDLoginScreen> {
                   SDButton(
                     textContent: "SIGN IN",
                     onPressed: () {
-                      SDRegisterScreen().launch(context);
+                      Home().launch(context);
                     },
                   ),
                   SizedBox(height: 20),

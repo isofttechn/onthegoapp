@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "3102130538",
+    "project_id": "onthegoapp-75858",
+    "storage_bucket": "onthegoapp-75858.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:3102130538:android:bee9fc87f05571f8bde513",
+        "android_client_info": {
+          "package_name": "com.todo.onthegoapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "3102130538-kh7efamgvd8sk1ldqubhio6t0t9li0oh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfqQTNFzZn6ROPapBjQXUjzVOLis55q7k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "3102130538-kh7efamgvd8sk1ldqubhio6t0t9li0oh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

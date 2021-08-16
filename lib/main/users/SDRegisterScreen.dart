@@ -27,8 +27,8 @@ class _SDRegisterScreenState extends State<SDRegisterScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Text('Easy to learn \nanywhere and anytime',
-                      style: boldTextStyle(size: 25)),
+                  // Text('Easy to learn \nanywhere and anytime',
+                  //     style: boldTextStyle(size: 25)),
                   SizedBox(height: 25),
                   Text('Sign in to your account',
                       style: secondaryTextStyle(size: 16)),
@@ -44,7 +44,7 @@ class _SDRegisterScreenState extends State<SDRegisterScreen> {
                           autocorrect: true,
                           autofocus: false,
                           decoration: InputDecoration(
-                            hintText: 'Username or Mobile number',
+                            hintText: 'Username',
                             hintStyle: secondaryTextStyle(
                                 color: sdTextSecondaryColor.withOpacity(0.6)),
                             border: InputBorder.none,
@@ -56,7 +56,27 @@ class _SDRegisterScreenState extends State<SDRegisterScreen> {
                                 left: 16, bottom: 16, top: 16, right: 16),
                           ),
                         ),
-                        Divider(height: 1, thickness: 1),
+                        Divider(height: 10, thickness: 10),
+                        TextField(
+                          cursorColor: sdTextSecondaryColor.withOpacity(0.2),
+                          cursorWidth: 1,
+                          autocorrect: true,
+                          autofocus: false,
+                          keyboardType: TextInputType.emailAddress,
+                          decoration: InputDecoration(
+                            hintText: 'Email',
+                            hintStyle: secondaryTextStyle(
+                                color: sdTextSecondaryColor.withOpacity(0.6)),
+                            border: InputBorder.none,
+                            focusedBorder: InputBorder.none,
+                            enabledBorder: InputBorder.none,
+                            errorBorder: InputBorder.none,
+                            disabledBorder: InputBorder.none,
+                            contentPadding: EdgeInsets.only(
+                                left: 16, bottom: 16, top: 16, right: 16),
+                          ),
+                        ),
+                        Divider(height: 10, thickness: 10),
                         Row(
                           children: <Widget>[
                             Flexible(

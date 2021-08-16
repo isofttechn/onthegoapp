@@ -62,7 +62,7 @@ class _SDWalkThroughScreenState extends State<SDWalkThroughScreen> {
                         padding: EdgeInsets.only(
                             top: size.height * 0.1, left: 10, right: 10),
                         child: Image(
-                          image: AssetImage('images/img-icons/reminder1.png'),
+                          image: AssetImage('images/img-icons/Reminder1.png'),
                           height: size.height * 0.3,
                           width: size.width,
                           fit: BoxFit.contain,
@@ -84,7 +84,7 @@ class _SDWalkThroughScreenState extends State<SDWalkThroughScreen> {
                         padding: EdgeInsets.only(
                             top: size.height * 0.1, left: 10, right: 10),
                         child: Image(
-                          image: AssetImage('images/img-icons/reminder2.png'),
+                          image: AssetImage('images/img-icons/Reminder2.png'),
                           height: size.height * 0.3,
                           width: size.width,
                           fit: BoxFit.contain,
@@ -107,7 +107,7 @@ class _SDWalkThroughScreenState extends State<SDWalkThroughScreen> {
                         padding: EdgeInsets.only(
                             top: size.height * 0.1, left: 10, right: 10),
                         child: Image(
-                          image: AssetImage('images/img-icons/reminder3.png'),
+                          image: AssetImage('images/img-icons/Reminder3.png'),
                           height: size.height * 0.3,
                           width: size.width,
                           fit: BoxFit.contain,

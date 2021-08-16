@@ -3,6 +3,11 @@ import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:onthegoapp/main/screens/SDSplashScreen.dart';
 
+import 'main/stores/AppStore.dart';
+
+/// This variable is used to get dynamic colors when theme mode is changed
+AppStore appStore = AppStore();
+
 void main() {
   runApp(MyApp());
 }

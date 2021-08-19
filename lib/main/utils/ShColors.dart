@@ -46,3 +46,8 @@ const sh_radiobuttonTint = Color(0xFF4353FA);
 const sh_scratch_start_gradient = Color(0xFFe5e5e5);
 const sh_scratch_end_gradient = Color(0xFFcccccc);
 const sh_shadow_color = Color(0X95E9EBF0);
+
+//MEDITATES
+const t2_green = Color(0XFF5CD551);
+const t2_red = Color(0XFFFD4D4B);
+const t2_colorPrimary = Color(0XFF5959fc);

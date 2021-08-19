@@ -10,3 +10,8 @@ const sh_faqs = "images/side-bar/faq.png";
 const sh_identification = "images/side-bar/identification.png";
 const ic_app_icon = "images/side-bar/ic_logo.png";
 const ic_app_heart = "images/img-icons/heart.png";
+
+//MEDITATE
+const med_aware = "images/img-icons/character.png";
+const med_stress = "images/img-icons/character2.png";
+const med_relax = "images/img-icons/character33.png";

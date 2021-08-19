@@ -19,3 +19,10 @@ const dashboard_text_todo = "TODO";
 const dashbord_text_health = "Health & Meditation";
 const dashboard_text_fun = "Fun";
 const dashboard_text_goal = "Goals";
+
+//MEDITATE
+const t2_usable_flower_for_health = "Usable Flower for Health";
+const t2_sample_text =
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry.";
+const t2_samplelong_text =
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry.simply duumy text ";

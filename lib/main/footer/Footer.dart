@@ -18,6 +18,15 @@ class Footer extends StatefulWidget {
 
 class _FooterState extends State<Footer> {
   var _selectedIndex = 0;
+
+  List<String> mainScreensTitles = [
+    'Dashboard',
+    'Health',
+    'Meditation',
+    'Sleep',
+    'Sounds'
+  ];
+
   final pages = [
     Dashboard(),
     Health(),
@@ -45,6 +54,8 @@ class _FooterState extends State<Footer> {
               blurRadius: 5)
         ]),
         child: Db5BottomNavigationBar(
+          showSelectedLabels: true,
+          showUnselectedLabels: true,
           items: <Db5BottomNavigationBarItem>[
             Db5BottomNavigationBarItem(icon: db5_ic_home),
             Db5BottomNavigationBarItem(icon: db5_ic_heart),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:onthegoapp/main/Home/Db5PageController.dart';
 import 'package:onthegoapp/main/Home/DbStrings.dart';
 import 'package:onthegoapp/main/footer/Footer.dart';
 import 'package:onthegoapp/main/health/Health.dart';
@@ -12,6 +13,13 @@ import '../../main.dart';
 
 class Dashboard extends StatefulWidget {
   late final Size size;
+  late final Db5PageController _pageController;
+
+  Dashboard({
+    required Db5PageController pageController,
+  }) {
+    _pageController = pageController;
+  }
 
   @override
   DashboardState createState() => DashboardState();
@@ -102,10 +110,11 @@ class DashboardState extends State<Dashboard> {
                           ),
                           GestureDetector(
                             onTap: () {
-                              Navigator.push(
+                              /* Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => new Health()));
+                                      builder: (context) => new Health())); */
+                              widget._pageController.setValue(1);
                             },
                             child: Container(
                               height: 200,

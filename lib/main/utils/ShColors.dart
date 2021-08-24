@@ -51,3 +51,10 @@ const sh_shadow_color = Color(0X95E9EBF0);
 const t2_green = Color(0XFF5CD551);
 const t2_red = Color(0XFFFD4D4B);
 const t2_colorPrimary = Color(0XFF5959fc);
+
+//HEALTH
+const sh_breath_1 = Color(0xFFFE2D9A6);
+const sh_breath_2 = Color(0xFFFC98BBF);
+const sh_breath_3 = Color(0xFFF84A6F2);
+const sh_breath_4 = Color(0xFFFFFA8A7);
+const sh_breath_title_1 = Color(0xFFFFFFFF);

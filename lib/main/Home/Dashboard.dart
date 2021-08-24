@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:onthegoapp/main/Home/DbStrings.dart';
 import 'package:onthegoapp/main/footer/Footer.dart';
+import 'package:onthegoapp/main/health/Health.dart';
 // import 'package:flutter_svg/flutter_svg.dart';
 import 'package:onthegoapp/main/utils/AppWidget.dart';
 import 'package:onthegoapp/main/utils/ShConstant.dart';
@@ -63,66 +64,79 @@ class DashboardState extends State<Dashboard> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         // crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          Container(
-                            height: 250,
-                            width: 140,
-                            padding: EdgeInsets.only(left: 16, right: 16),
-                            decoration: boxDecoration(
-                              radius: 16,
-                              showShadow: true,
-                              bgColor: Colors.blueAccent,
-                            ),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: <Widget>[
-                                Icon(
-                                  Icons.task_alt, size: 50,
-                                  color: Colors.white,
-                                  // size: width / 13, height: width / 13,
-                                ),
-                                SizedBox(height: 10),
-                                text(dashboard_text_todo,
-                                    textColor: appStore.textPrimaryColor,
-                                    fontSize: textSizeLargeMedium,
-                                    fontFamily: fontSemibold),
-                                text(dashboard_desc_todo,
-                                    fontSize: textSizeMedium),
-                                SizedBox(height: 13),
-                              ],
-                            ),
-                            // );
-                            // },
-                          ),
-                          Container(
-                            height: 200,
-                            width: 140,
-                            padding: EdgeInsets.only(left: 16, right: 16),
-                            decoration: boxDecoration(
+                          GestureDetector(
+                            onTap: () {
+                              print("TOD LIST");
+                            },
+                            child: Container(
+                              height: 250,
+                              width: 140,
+                              padding: EdgeInsets.only(left: 16, right: 16),
+                              decoration: boxDecoration(
                                 radius: 16,
                                 showShadow: true,
-                                bgColor: Colors.redAccent),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: <Widget>[
-                                Icon(
-                                  Icons.health_and_safety_sharp,
-                                  color: Colors.white, size: 50,
-                                  // size: width / 13, height: width / 13,
-                                ),
-                                SizedBox(height: 10),
-                                text(dashbord_text_health,
-                                    textColor: appStore.textPrimaryColor,
-                                    fontSize: textSizeLargeMedium,
-                                    fontFamily: fontSemibold),
-                                text(dashboard_desc_health,
-                                    fontSize: textSizeMedium),
-                                SizedBox(height: 13),
-                              ],
+                                bgColor: Colors.blueAccent,
+                              ),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: <Widget>[
+                                  Icon(
+                                    Icons.task_alt, size: 50,
+                                    color: Colors.white,
+                                    // size: width / 13, height: width / 13,
+                                  ),
+                                  SizedBox(height: 10),
+                                  text(dashboard_text_todo,
+                                      textColor: appStore.textPrimaryColor,
+                                      fontSize: textSizeLargeMedium,
+                                      fontFamily: fontSemibold),
+                                  text(dashboard_desc_todo,
+                                      fontSize: textSizeMedium),
+                                  SizedBox(height: 13),
+                                ],
+                              ),
+                              // );
+                              // },
                             ),
-                            // );
-                            // },
+                          ),
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => new Health()));
+                            },
+                            child: Container(
+                              height: 200,
+                              width: 140,
+                              padding: EdgeInsets.only(left: 16, right: 16),
+                              decoration: boxDecoration(
+                                  radius: 16,
+                                  showShadow: true,
+                                  bgColor: Colors.redAccent),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: <Widget>[
+                                  Icon(
+                                    Icons.health_and_safety_sharp,
+                                    color: Colors.white, size: 50,
+                                    // size: width / 13, height: width / 13,
+                                  ),
+                                  SizedBox(height: 10),
+                                  text(dashbord_text_health,
+                                      textColor: appStore.textPrimaryColor,
+                                      fontSize: textSizeLargeMedium,
+                                      fontFamily: fontSemibold),
+                                  text(dashboard_desc_health,
+                                      fontSize: textSizeMedium),
+                                  SizedBox(height: 13),
+                                ],
+                              ),
+                              // );
+                              // },
+                            ),
                           ),
                         ],
                       ),

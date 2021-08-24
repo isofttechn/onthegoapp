@@ -26,3 +26,16 @@ const t2_sample_text =
     "Lorem Ipsum is simply dummy text of the printing and typesetting industry.";
 const t2_samplelong_text =
     "Lorem Ipsum is simply dummy text of the printing and typesetting industry.simply duumy text ";
+
+//HEALTH
+const health_title_1 = "Fear";
+const health_desc_1 = "Reduce fear";
+
+const health_title_2 = "Jealousy";
+const health_desc_2 = "Reduce jealousy";
+
+const health_title_3 = "Stress";
+const health_desc_3 = "Reduce stress";
+
+const health_title_4 = "Anger";
+const health_desc_4 = "Reduce anger";

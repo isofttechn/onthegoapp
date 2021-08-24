@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:onthegoapp/main/Home/Dashboard.dart';
 import 'package:onthegoapp/main/Home/DashboardCard.dart';
+import 'package:onthegoapp/main/Home/Db5PageController.dart';
 import 'package:onthegoapp/main/footer/Footer.dart';
 import 'package:onthegoapp/main/models/ShCategory.dart';
 import 'package:onthegoapp/main/screens/ShImages.dart';
@@ -23,6 +24,14 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   List<ShCategory> list = [];
   var selectedTab = 0;
+  late final Db5PageController pageController;
+
+  @override
+  void initState() {
+    super.initState();
+    pageController = Db5PageController(initialPage: 0);
+  }
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -46,8 +55,8 @@ class _HomeState extends State<Home> {
       ),
       body: Stack(
         children: <Widget>[
-          Dashboard(),
-          Footer(),
+          Dashboard(pageController: pageController),
+          Footer(pageController: pageController),
         ],
       ),
       drawer: SizedBox(
@@ -146,7 +155,7 @@ class _HomeState extends State<Home> {
                   ),
                   SizedBox(height: 30),
                   getDrawerItem(ic_dashboard, sh_lbl_dashboard, callback: () {
-                    Dashboard().launch(context);
+                    // Dashboard(pageController: pageController).launch(context);
                   }),
                   getDrawerItem(ic_completed_task, sh_lbl_task, callback: () {
                     // ShContactUsScreen().launch(context);

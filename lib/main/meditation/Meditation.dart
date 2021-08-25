@@ -134,15 +134,20 @@ class MeditationState extends State<Meditation> {
                                     children: <Widget>[
                                       Row(
                                         children: <Widget>[
-                                          CachedNetworkImage(
-                                            placeholder: placeholderWidgetFn()
-                                                as Widget Function(
-                                                    BuildContext, String)?,
-                                            imageUrl:
-                                                mFavouriteList[index].image,
+                                          Image.asset(
+                                            mFavouriteList[index].image,
                                             width: width / 5,
                                             height: 100,
                                           ),
+                                          // CachedNetworkImage(
+                                          //   placeholder: placeholderWidgetFn()
+                                          //       as Widget Function(
+                                          //           BuildContext, String)?,
+                                          //   imageUrl:
+                                          //       mFavouriteList[index].image,
+                                          //   width: width / 5,
+                                          //   height: 100,
+                                          // ),
                                           Expanded(
                                             child: Container(
                                               padding:

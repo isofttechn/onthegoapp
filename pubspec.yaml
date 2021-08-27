@@ -64,6 +64,10 @@ flutter:
     - images/dashboard/
     - images/meditation/
     - images/health/
+    - images/sleep/
+    - images/sound/
+
+
 
 
   #   - images/a_dot_ham.jpeg

@@ -17,3 +17,9 @@ const d5_ic_food = "images/dashboard/d5_ic_food.svg";
 
 //HEALTH
 const d5_breath = "images/health/breath.svg";
+
+//SLEEP
+const d5_sleep = "images/sleep/amico.svg";
+
+//SOUND
+const d5_sound = "images/sound/sound.svg";

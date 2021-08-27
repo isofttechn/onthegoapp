@@ -7,6 +7,7 @@ import 'package:onthegoapp/main/health/Health.dart';
 import 'package:onthegoapp/main/meditation/Meditation.dart';
 import 'package:onthegoapp/main/sleep/Sleep.dart';
 import 'package:onthegoapp/main/sounds/Sounds.dart';
+import 'package:onthegoapp/main/task/TaskBody.dart';
 
 import 'package:onthegoapp/main/utils/DbColors.dart';
 
@@ -41,6 +42,7 @@ class _FooterState extends State<Footer> {
     Meditation(),
     Sleep(),
     Sounds(),
+    TaskBody(),
   ];
 
   @override

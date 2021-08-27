@@ -126,3 +126,6 @@ const db8_viewColor = Color(0xFFEEEEF1);
 const db8_layout_background = Color(0xFFF6F7FA);
 
 const dbShadowColor = Color(0x95E9EBF0);
+
+const t7light_blue = Color(0xFFD6DBF0);
+const t7textColorSecondary = Color(0xFF9D9D9D);

@@ -137,7 +137,7 @@ class MeditationState extends State<Meditation> {
                                           Image.asset(
                                             mFavouriteList[index].image,
                                             width: width / 5,
-                                            height: 100,
+                                            height: 110,
                                           ),
                                           // CachedNetworkImage(
                                           //   placeholder: placeholderWidgetFn()

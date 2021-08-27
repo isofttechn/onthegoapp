@@ -1,21 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:onthegoapp/main/Home/Dashboard.dart';
-import 'package:onthegoapp/main/Home/DashboardCard.dart';
 import 'package:onthegoapp/main/Home/Db5PageController.dart';
 import 'package:onthegoapp/main/footer/Footer.dart';
 import 'package:onthegoapp/main/models/ShCategory.dart';
 import 'package:onthegoapp/main/screens/ShImages.dart';
-// import 'package:onthegoapp/main/utils/AppConstant.dart';
 import 'package:onthegoapp/main/utils/AppWidget.dart';
 import 'package:onthegoapp/main/utils/DbColors.dart';
 import 'package:onthegoapp/main/utils/ShColors.dart';
 import 'package:onthegoapp/main/utils/ShConstant.dart';
 import 'package:onthegoapp/main/utils/ShStrings.dart';
-import 'package:nb_utils/nb_utils.dart';
+// import 'package:onthegoapp/main/Home/Db5PageController.dart';
 
 class Home extends StatefulWidget {
   // Home({Key? key}) : super(key: key);
+  // late final Db5PageController _pageController;
+
+  // Home({
+  //   required Db5PageController pageController,
+  // }) {
+  //   _pageController = pageController;
+  // }
 
   @override
   _HomeState createState() => _HomeState();
@@ -158,7 +163,8 @@ class _HomeState extends State<Home> {
                     // Dashboard(pageController: pageController).launch(context);
                   }),
                   getDrawerItem(ic_completed_task, sh_lbl_task, callback: () {
-                    // ShContactUsScreen().launch(context);
+                    // TaskBody().launch(context);
+                    // widget._pageController.setValue(5);
                   }),
                   getDrawerItem(ic_category, sh_lbl_category, callback: () {
                     // ShContactUsScreen().launch(context);

@@ -2,9 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:onthegoapp/main/Home/Db5PageController.dart';
 import 'package:onthegoapp/main/Home/DbStrings.dart';
-import 'package:onthegoapp/main/footer/Footer.dart';
-import 'package:onthegoapp/main/health/Health.dart';
-// import 'package:flutter_svg/flutter_svg.dart';
 import 'package:onthegoapp/main/utils/AppWidget.dart';
 import 'package:onthegoapp/main/utils/ShConstant.dart';
 import 'package:onthegoapp/main/utils/ShStrings.dart';
@@ -74,7 +71,7 @@ class DashboardState extends State<Dashboard> {
                         children: [
                           GestureDetector(
                             onTap: () {
-                              print("TOD LIST");
+                              widget._pageController.setValue(5);
                             },
                             child: Container(
                               height: 250,

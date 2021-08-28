@@ -33,7 +33,11 @@ class Db5PageController extends PageController {
 
   @override
   void notifyListeners() {
-    pageIndex.value = page!.toInt();
+    pageIndex.value = _currentPage;
     super.notifyListeners();
+  }
+
+  int get _currentPage {
+    return page!.round();
   }
 }

@@ -23,21 +23,10 @@ class Dashboard extends StatefulWidget {
 }
 
 class DashboardState extends State<Dashboard> {
-  // int selectedPos = 1;
-  // late List<T5Bill> mCards;
-
-  // @override
-  // void initState() {
-  //   super.initState();
-  //   selectedPos = 1;
-  //   mCards = getListData();
-  // }
-
   @override
   Widget build(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
 
-    // changeStatusColor(appStore.appBarColor!);
     return Scaffold(
       backgroundColor: appStore.scaffoldBackground,
       body: Container(
@@ -71,7 +60,7 @@ class DashboardState extends State<Dashboard> {
                         children: [
                           GestureDetector(
                             onTap: () {
-                              widget._pageController.setValue(5);
+                              widget._pageController.goTo(Db5Page.Tasks);
                             },
                             child: Container(
                               height: 250,
@@ -107,11 +96,7 @@ class DashboardState extends State<Dashboard> {
                           ),
                           GestureDetector(
                             onTap: () {
-                              /* Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => new Health())); */
-                              widget._pageController.setValue(1);
+                              widget._pageController.goTo(Db5Page.Health);
                             },
                             child: Container(
                               height: 200,

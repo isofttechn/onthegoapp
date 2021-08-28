@@ -29,12 +29,12 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   List<ShCategory> list = [];
   var selectedTab = 0;
-  late final Db5PageController pageController;
+  late final Db5PageController _pageController;
 
   @override
   void initState() {
     super.initState();
-    pageController = Db5PageController(initialPage: 0);
+    _pageController = Db5PageController(initialPage: 0);
   }
 
   @override
@@ -53,17 +53,14 @@ class _HomeState extends State<Home> {
             onPressed: () {},
           ),
         ],
-        title: text(title,
-            textColor: sh_colorPrimary,
-            fontFamily: fontBold,
-            fontSize: textSizeNormal),
+        title: text(
+          title,
+          textColor: sh_colorPrimary,
+          fontFamily: fontBold,
+          fontSize: textSizeNormal,
+        ),
       ),
-      body: Stack(
-        children: <Widget>[
-          Dashboard(pageController: pageController),
-          Footer(pageController: pageController),
-        ],
-      ),
+      body: Footer(pageController: _pageController),
       drawer: SizedBox(
         width: MediaQuery.of(context).size.width * 0.85,
         height: MediaQuery.of(context).size.height,
@@ -80,39 +77,44 @@ class _HomeState extends State<Home> {
                     children: <Widget>[
                       Center(
                         child: Padding(
-                            padding: const EdgeInsets.only(
-                                top: 60, right: spacing_large),
-                            child: Column(
-                              children: <Widget>[
-                                Card(
-                                  semanticContainer: true,
-                                  clipBehavior: Clip.antiAliasWithSaveLayer,
-                                  elevation: spacing_standard,
-                                  margin: EdgeInsets.all(spacing_control),
-                                  shape: RoundedRectangleBorder(
-                                      borderRadius:
-                                          BorderRadius.circular(100.0)),
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(4.0),
-                                    child: CircleAvatar(
-                                        backgroundImage: AssetImage(ic_user),
-                                        radius: 55),
+                          padding: const EdgeInsets.only(
+                              top: 60, right: spacing_large),
+                          child: Column(
+                            children: <Widget>[
+                              Card(
+                                semanticContainer: true,
+                                clipBehavior: Clip.antiAliasWithSaveLayer,
+                                elevation: spacing_standard,
+                                margin: EdgeInsets.all(spacing_control),
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(100.0)),
+                                child: Padding(
+                                  padding: const EdgeInsets.all(4.0),
+                                  child: CircleAvatar(
+                                    backgroundImage: AssetImage(ic_user),
+                                    radius: 55,
                                   ),
                                 ),
-                                SizedBox(height: spacing_middle),
-                                text("Abraham William",
-                                    textColor: sh_textColorPrimary,
-                                    fontFamily: fontBold,
-                                    fontSize: textSizeNormal)
-                              ],
-                            )),
+                              ),
+                              SizedBox(height: spacing_middle),
+                              text(
+                                "Abraham William",
+                                textColor: sh_textColorPrimary,
+                                fontFamily: fontBold,
+                                fontSize: textSizeNormal,
+                              ),
+                            ],
+                          ),
+                        ),
                       ),
                       Align(
-                          alignment: Alignment.topLeft,
-                          child: Padding(
-                              padding: const EdgeInsets.only(
-                                  left: spacing_standard_new, top: 30),
-                              child: Icon(Icons.clear)))
+                        alignment: Alignment.topLeft,
+                        child: Padding(
+                          padding: const EdgeInsets.only(
+                              left: spacing_standard_new, top: 30),
+                          child: Icon(Icons.clear),
+                        ),
+                      ),
                     ],
                   ),
                   SizedBox(height: 30),
@@ -161,10 +163,12 @@ class _HomeState extends State<Home> {
                   SizedBox(height: 30),
                   getDrawerItem(ic_dashboard, sh_lbl_dashboard, callback: () {
                     // Dashboard(pageController: pageController).launch(context);
+                    _pageController.goTo(Db5Page.Dashboard);
                   }),
                   getDrawerItem(ic_completed_task, sh_lbl_task, callback: () {
                     // TaskBody().launch(context);
                     // widget._pageController.setValue(5);
+                    _pageController.goTo(Db5Page.Tasks);
                   }),
                   getDrawerItem(ic_category, sh_lbl_category, callback: () {
                     // ShContactUsScreen().launch(context);
@@ -252,22 +256,31 @@ class _HomeState extends State<Home> {
 
   //GET DRAWER ITEM
   Widget getDrawerItem(String? icon, String? name, {VoidCallback? callback}) {
-    return InkWell(
-      onTap: callback,
-      child: Container(
-        color: sh_white,
-        padding: EdgeInsets.fromLTRB(20, 14, 20, 14),
-        child: Row(
-          children: <Widget>[
-            icon != null
-                ? Image.asset(icon, width: 20, height: 20)
-                : Container(width: 20),
-            SizedBox(width: 20),
-            text(name,
-                textColor: sh_textColorPrimary,
-                fontSize: textSizeMedium,
-                fontFamily: fontMedium)
-          ],
+    return Builder(
+      builder: ($context) => InkWell(
+        onTap: () {
+          if (callback != null) callback();
+
+          ScaffoldState $scaffold = Scaffold.of($context);
+          if ($scaffold.hasDrawer && $scaffold.isDrawerOpen) {
+            Navigator.of(context).pop();
+          }
+        },
+        child: Container(
+          color: sh_white,
+          padding: EdgeInsets.fromLTRB(20, 14, 20, 14),
+          child: Row(
+            children: <Widget>[
+              icon != null
+                  ? Image.asset(icon, width: 20, height: 20)
+                  : Container(width: 20),
+              SizedBox(width: 20),
+              text(name,
+                  textColor: sh_textColorPrimary,
+                  fontSize: textSizeMedium,
+                  fontFamily: fontMedium)
+            ],
+          ),
         ),
       ),
     );

@@ -1,18 +1,39 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 
-class Db5PageController {
+enum Db5Page {
+  Dashboard,
+  Health,
+  Meditation,
+  Sleep,
+  Sounds,
+  Tasks,
+}
+
+class Db5PageController extends PageController {
   late final ValueNotifier<int> pageIndex;
 
-  Db5PageController({int initialPage = 0}) {
+  Db5PageController({int initialPage = 0}) : super(initialPage: initialPage) {
     pageIndex = ValueNotifier(0);
   }
 
-  void setValue(int index) {
-    pageIndex.value = index;
+  void goTo(Db5Page page) {
+    pageIndex.value = page.index;
+    super.animateToPage(
+      page.index,
+      duration: const Duration(milliseconds: 200),
+      curve: Curves.linear,
+    );
   }
 
-  void addListener(void Function() function) {
-    pageIndex.addListener(function);
+  @override
+  void addListener(void Function() listener) {
+    super.addListener(listener);
+  }
+
+  @override
+  void notifyListeners() {
+    pageIndex.value = page!.toInt();
+    super.notifyListeners();
   }
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:onthegoapp/main/task/taskcartegory/TaskModel.dart';
+import 'package:onthegoapp/main/task/taskcartegory/TaskModelCat.dart';
 import 'package:onthegoapp/main/utils/AppWidget.dart';
 import 'package:onthegoapp/main/utils/DbColors.dart';
 
@@ -11,7 +12,7 @@ class TaskBody extends StatefulWidget {
 }
 
 class _TaskBodyState extends State<TaskBody> {
-  late List<TaskCategoryDataModel> mListings;
+  List<TaskCategoryDataModel> mListings = generateCategories();
 
   @override
   Widget build(BuildContext context) {
@@ -25,14 +26,15 @@ class _TaskBodyState extends State<TaskBody> {
             SizedBox(
               height: 120,
               child: ListView.builder(
-                  scrollDirection: Axis.horizontal,
-                  itemCount: mListings.length,
-                  shrinkWrap: true,
-                  physics: ScrollPhysics(),
-                  itemBuilder: (context, index) {
-                    return category(mListings[index], index);
-                  }),
-            )
+                scrollDirection: Axis.horizontal,
+                itemCount: mListings.length,
+                shrinkWrap: true,
+                physics: ScrollPhysics(),
+                itemBuilder: (context, index) {
+                  return Category(mListings[index], index);
+                },
+              ),
+            ),
           ],
         ),
       ),
@@ -41,11 +43,11 @@ class _TaskBodyState extends State<TaskBody> {
 }
 
 // ignore: must_be_immutable, camel_case_types
-class category extends StatelessWidget {
+class Category extends StatelessWidget {
   // const category({Key? key}) : super(key: key);
   late TaskCategoryDataModel model;
 
-  category(TaskCategoryDataModel model, int pos) {
+  Category(TaskCategoryDataModel model, int pos) {
     this.model = model;
   }
 

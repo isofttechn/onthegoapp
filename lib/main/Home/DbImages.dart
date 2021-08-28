@@ -7,6 +7,7 @@ const db5_ic_home = "images/dashboard/db5_ic_home.svg";
 const db5_ic_meditate = "images/dashboard/meditation.svg";
 const db5_ic_sleep = "images/dashboard/moon.svg";
 const db5_ic_sounds = "images/dashboard/speaker.svg";
+const db5_ic_task = "images/dashboard/d5_ic_event.svg";
 const db5_ic_heart = "images/dashboard/lungs.svg";
 const db5_ic_msg = "images/dashboard/meditation.svg";
 const db5_ic_setting = "images/dashboard/db5_ic_setting.svg";

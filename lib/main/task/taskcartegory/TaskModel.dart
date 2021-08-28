@@ -1,4 +1,6 @@
 class TaskCategoryDataModel {
-  var name = "";
-  var image = "";
+  final name;
+  final image;
+
+  const TaskCategoryDataModel(this.name, this.image);
 }
